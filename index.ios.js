@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import { AppRegistry , View } from 'react-native';
+// Index.ios.js - place code in here for IOS!!!!
+
+// Import a library to help create a component
+import React from 'react';
+import { AppRegistry, View } from 'react-native';
 import Header from './src/components/header';
 import AlbumList from './src/components/AlbumList';
 
-export default class App extends Component {
-  render() {
-    return (
-      <View>
-        <Header headerText={'Albums'} />
-        <AlbumList />
-      </View>
-    );
-  }
-}
+// Create a component
+const App = () => (
+  <View>
+    <Header headerText={'Albums'} />
+    <AlbumList />
+  </View>
+);
 
-// skip this line if using Create React Native App
+// Render it to the device
 AppRegistry.registerComponent('albums', () => App);
